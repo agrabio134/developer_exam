@@ -1,17 +1,19 @@
-Table Waitlist 
-A minimal restaurant waitlist management prototype built with Next.js 14 (App Router) and JavaScript.
-Tech Choices
+Table Waitlist
+A minimal restaurant waitlist management prototype built using Next.js 14 (App Router) and JavaScript.
 
-Next.js 14 (App Router): For modern routing and Server Components.
-Plain CSS: Lightweight, custom styling for a mobile-friendly UI.
-JavaScript: Per assignment requirements
-Added react-toastify for simple alert 
+Tech Stack & Features
 
-*note: Initially i still used Express JS for this one since I'm comfortable using it, but I challenge myself to use what's more suitable in Next, which is next itself
+Next.js 14 (App Router): Utilized for modern routing and server components.
+JavaScript: Used as per assignment requirements.
+Plain CSS: Lightweight, custom styling optimized for mobile devices.
+React-Toastify: Added for simple, non-intrusive alert notifications.
+Mongoose + MongoDB: Integrated for database operations.
+Core Features:
 
+Waitlist form submission
+Table management
+Server-side actions
+Seated guest logging
 
-Add Mongoose for MongoDB integration.
-Implement waitlist form, table, and server actions.
-Add seated log 
-
+*Note: Initially, I used Express.js out of familiarity. However, I challenged myself to adopt a more Next.js-native approach to better align with modern full-stack practices.
 
