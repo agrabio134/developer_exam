@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import { addGuest } from '../actions';
 
 export default function GuestForm({ onAddGuest }) {
@@ -25,18 +26,18 @@ export default function GuestForm({ onAddGuest }) {
     try {
       const result = await addGuest(formData);
       if (result.success) {
-        alert(`Guest "${name}" added successfully`);
+        toast.success(`Guest "${name}" added successfully`);
         setName('');
         setPartySize(1);
       } else {
-        alert(`Error adding guest "${name}": ${result.error}`);
+        toast.error(`Error adding guest "${name}": ${result.error}`);
         if (onAddGuest) {
           onAddGuest(null);
         }
       }
     } catch (error) {
       console.error('Error adding guest:', error);
-      alert(`Error adding guest "${name}": Network error`);
+      toast.error(`Error adding guest "${name}": Network error`);
       if (onAddGuest) {
         onAddGuest(null);
       }

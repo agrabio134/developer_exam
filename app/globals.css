@@ -1,64 +1,97 @@
-/* styles/globals.css */
 body {
-  background-color: #f0f0f0;
-  padding: 16px;
-  font-family: Arial, sans-serif;
+  background-color: #f7f7f7; 
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
+  color: #333; 
+  line-height: 1.6;
 }
 
 .nav {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  background-color: #fff; 
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
-  color: #2563eb;
+  color: #1e40af;
   text-decoration: none;
-  margin-right: 16px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 24px;
+  transition: color 0.2s;
 }
 
 .nav-link:hover {
+  color: #3b82f6;
   text-decoration: underline;
 }
 
 .container {
-  max-width: 672px;
+  max-width: 720px; 
   margin: 0 auto;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1f2937;
 }
 
 .guest-form {
   display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
 }
 
 .input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #d1d5db; 
+  border-radius: 6px;
   font-size: 16px;
+  width: 100%;
+  max-width: 200px; 
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6; 
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .button {
-  padding: 8px 16px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
-  color: white;
+  border-radius: 6px;
+  color: #fff;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 .button-green {
-  background-color: #16a34a;
+  background-color: #15803d; 
+}
+
+.button-green:hover {
+  background-color: #16a34a; 
 }
 
 .button-red {
+  background-color: #b91c1c; 
+}
+
+.button-red:hover {
   background-color: #dc2626;
 }
 
@@ -69,57 +102,101 @@ body {
 
 .guest-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .guest-table th,
 .guest-table td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 12px;
   text-align: left;
 }
 
 .guest-table th {
-  background-color: #e5e7eb;
+  background-color: #f3f4f6; 
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.guest-table td {
+  background-color: #fff;
+  font-size: 15px;
 }
 
 .guest-table td form {
   display: flex;
-  gap: 8px;
+  gap: 12px;
 }
 
 .error {
-  color: #dc2626;
-  margin-top: 8px;
+  color: #b91c1c;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;
+  padding: 8px;
+  background-color: #fee2e2; 
+  border-radius: 6px;
 }
 
 .empty-state {
-  margin-top: 8px;
+  font-size: 16px;
   font-style: italic;
+  color: #4b5563;
+  margin-top: 12px;
+  text-align: center;
 }
 
 /* Responsive design */
 @media (max-width: 640px) {
   body {
+    padding: 16px;
+  }
+
+  .nav {
     padding: 8px;
   }
 
   .nav-link {
-    display: inline-block;
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
   }
 
   .container {
     max-width: 100%;
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 24px;
   }
 
   .guest-form {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input {
+    max-width: 100%;
   }
 
   .guest-table th,
   .guest-table td {
     font-size: 14px;
-    padding: 4px;
+    padding: 8px;
+  }
+
+  .guest-table td form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .button {
+    width: 100%;
   }
 }

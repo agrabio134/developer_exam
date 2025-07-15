@@ -2,13 +2,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { seatGuest, removeGuest } from '@/app/waitlist/actions';
+import { toast } from 'react-toastify';
+import { seatGuest, removeGuest } from '../actions';
 
 export default function GuestList({ initialGuests }) {
   const [guests, setGuests] = useState(initialGuests || []);
   const [error, setError] = useState(null);
 
-
+  // Fetch guests on mount and when triggered
   useEffect(() => {
     async function fetchGuests() {
       try {
@@ -39,11 +40,11 @@ export default function GuestList({ initialGuests }) {
       if (!result.success) {
         throw new Error(result.error);
       }
-      alert(`Guest "${name}" seated successfully`);
+      toast.success(`Guest "${name}" seated successfully`);
     } catch (error) {
       console.error('Error seating guest:', error);
       setGuests(previousGuests);
-      alert(`Error seating guest "${name}": ${error.message}`);
+      toast.error(`Error seating guest "${name}": ${error.message}`);
     }
   };
 
@@ -58,11 +59,11 @@ export default function GuestList({ initialGuests }) {
       if (!result.success) {
         throw new Error(result.error);
       }
-      alert(`Guest "${name}" removed successfully`);
+      toast.success(`Guest "${name}" removed successfully`);
     } catch (error) {
       console.error('Error removing guest:', error);
       setGuests(previousGuests);
-      alert(`Error removing guest "${name}": ${error.message}`);
+      toast.error(`Error removing guest "${name}": ${error.message}`);
     }
   };
 
