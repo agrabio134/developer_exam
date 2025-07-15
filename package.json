@@ -2,16 +2,22 @@
   "name": "table-waitlist-lite",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "node server/index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.3",
+    "next": "14.2.30",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.30"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
