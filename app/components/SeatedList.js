@@ -1,5 +1,5 @@
 // components/SeatedList.js
-import { getSeated } from '../../lib/mongodb';
+import { getSeated } from '../lib/mongodb';
 
 export default async function SeatedList() {
   let seatedGuests = [];

@@ -1,4 +1,4 @@
-import SeatedList from './components/SeatedList';
+import SeatedList from '../components/SeatedList';
 
 export default async function SeatedPage() {
   return (

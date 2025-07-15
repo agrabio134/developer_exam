@@ -1,5 +1,5 @@
-import GuestForm from './components/GuestForm';
-import GuestList from './components/GuestList';
+import GuestForm from '../components/GuestForm';
+import GuestList from '../components/GuestList';
 
 import { getWaitlist } from '../lib/mongodb';
 

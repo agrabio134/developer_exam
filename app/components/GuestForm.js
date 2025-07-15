@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-import { addGuest } from '../actions';
+import { addGuest } from '../waitlist/actions';
 
 export default function GuestForm({ onAddGuest }) {
   const [name, setName] = useState('');
@@ -64,7 +64,7 @@ export default function GuestForm({ onAddGuest }) {
         className="input"
         required
       />
-      <button type="submit" className="button" disabled={isSubmitting}>
+      <button type="submit" className="button btn-add" disabled={isSubmitting}>
         {isSubmitting ? 'Adding...' : 'Add Guest'}
       </button>
     </form>

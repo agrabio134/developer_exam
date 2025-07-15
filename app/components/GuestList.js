@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-import { seatGuest, removeGuest } from '../actions';
+import { seatGuest, removeGuest } from '../waitlist/actions';
 
 export default function GuestList({ initialGuests }) {
   const [guests, setGuests] = useState(initialGuests || []);
